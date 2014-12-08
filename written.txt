@@ -1,5 +1,12 @@
 1. (9.9)
+a)
+A faster CPU may decrease the CPU utilization percentage. 20% CPU utilization means that the CPU idles 80% of the time. If it does things even faster, the idle time could be longer such that the utilization percentage may become lower.
 
+b)
+A faster paging disk could increase the CPU utilization. Since CPU spends less time waiting on the paging disk I/O, it can do more things, becoming more busy. In that case, the CPU utilization percentage will increase.
+
+c)
+Increasing the degree of multiprogramming could have almost no effect on CPU utilization, or even a bit worse. When context switching, the paging disk access could result in CPU waiting. In that case, CPU utilization could be slightly decreased.
 
 2. (11.2)
 
