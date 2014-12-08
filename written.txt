@@ -24,3 +24,4 @@ http://unix.stackexchange.com/questions/50179/what-happens-when-you-delete-a-har
 
 
 6. (13.9)
+Because FAT uses linked lists to represent files. There is only room for file metadata with one directory entries with the file's name in the representation. Since each file can be accessed via exactly one directory entry, there is no way to use multiple hard links to the file.
