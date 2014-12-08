@@ -9,7 +9,10 @@ c)
 Increasing the degree of multiprogramming could have almost no effect on CPU utilization, or even a bit worse. When context switching, the paging disk access could result in CPU waiting. In that case, CPU utilization could be slightly decreased.
 
 2. (11.2)
+Since the file will remain in the disk and the inode corresponding to the file is being accessed, the subsequent reads of the first process should be fine.
 
+Reference:
+http://unix.stackexchange.com/questions/50179/what-happens-when-you-delete-a-hard-link
 
 3. (12.8)
 
