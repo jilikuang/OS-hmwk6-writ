@@ -15,10 +15,17 @@ Reference:
 http://unix.stackexchange.com/questions/50179/what-happens-when-you-delete-a-hard-link
 
 3. (12.8)
+Seek time: 12 ms
+Rotation time: 60 * 1000 / 5400 = 5.56 ms
+Transfer time: 512 / (850 / 8) = 4.82 us
 
+The first request: 12 + 5.56 + 0.00482 = 17.56482
+The subsequent requests: 5.56 + 0.00482 = 5.56482
+
+The result is 12 + 5.56482 * 10000 = 12 + 55648.2 = 55660.2 ms = 55.66 s
 
 4. (12.15)
-
+10000 / 100000 = 0.1 s
 
 5. (13.5)
 
