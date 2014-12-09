@@ -28,7 +28,17 @@ The result is 12 + 5.56482 * 10000 = 12 + 55648.2 = 55660.2 ms = 55.66 s
 10000 / 100000 = 0.1 s
 
 5. (13.5)
+a)
+12 direct to 6 KB block each = 12 * 6 KB = 72 KB
 
+b)
+6 KB / 6 B = 1024 pointers / block = 2^10 ppb
+indirect: 2^10 * 6 * 2^10 = 6 MB
+double: 2^10 * 2^10 * 6 * 2^10 = 6 GB
+triple: 2 * 2^10 * 2^10 * 2^10 * 6 * 2^10 = 12 TB
+quadruple: 2^10 * 2 * 2^10 * 2^10 * 2^10 * 6 * 2^10 = 12 PB
+
+bigger than 12.012 PB
 
 6. (13.9)
 Because FAT uses linked lists to represent files. There is only room for file metadata with one directory entries with the file's name in the representation. Since each file can be accessed via exactly one directory entry, there is no way to use multiple hard links to the file.
